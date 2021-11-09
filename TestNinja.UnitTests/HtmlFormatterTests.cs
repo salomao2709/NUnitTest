@@ -24,7 +24,7 @@ namespace TestNinja.UnitTests
             //more general
             Assert.That(result, Does.StartWith("<strong>").IgnoreCase);
             Assert.That(result, Does.EndWith("</strong>"));
-            Assert.That(result, Does.Contain("abs"));
+            Assert.That(result, Does.Contain("abc"));
         }
     }
 }
