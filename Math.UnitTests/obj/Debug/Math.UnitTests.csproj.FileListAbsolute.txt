@@ -1,0 +1,2 @@
+C:\source\unit_test\TestNinja\Math.UnitTests\obj\Debug\Math.UnitTests.csproj.AssemblyReference.cache
+C:\source\unit_test\TestNinja\Math.UnitTests\obj\Debug\Math.UnitTests.csproj.CoreCompileInputs.cache
