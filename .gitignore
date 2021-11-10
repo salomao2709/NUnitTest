@@ -1,0 +1,5 @@
+TestNinja/bin
+TestNinja/obj
+TestNinja.UnitTests/bin
+TestNinja.UnitTests/obj
+Math.UnitTests/obj
