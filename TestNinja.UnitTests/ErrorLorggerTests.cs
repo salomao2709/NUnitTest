@@ -42,5 +42,24 @@ namespace TestNinja.UnitTests
             //Assert.That(() => _logger.Log(error), Throws.TypeOf<DivideByZeroException>);
         }
 
+        [Test]
+        public void Log_ValidError_RaiseErrorLoggedEvent()
+        {
+            //it will receive the id of the error
+            var id = Guid.Empty;
+
+            //sender is the source of the event
+            //args is the event arguments
+
+            //if the event is raised, the { id = args } block will be executed and so id will have no longer be Guid.empty, but will be receive the id of the event (args)
+            //to test a class method that raise an event - we have to subscribe to that event before call the class method
+            _logger.ErrorLogged += (sender, args) => { id = args; };
+
+            _logger.Log("a");
+
+            Assert.That(id, Is.Not.EqualTo(Guid.Empty));
+            
+        }
+
     }
 }
