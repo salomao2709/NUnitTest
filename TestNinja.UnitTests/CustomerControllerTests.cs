@@ -27,7 +27,6 @@ namespace TestNinja.UnitTests
 
         public void GetCustomer_IdIsNotZero_RetornOk()
         {
-            //teste
         }
     }
 }
