@@ -12,8 +12,7 @@ namespace TestNinja.Mocking
         {
             var service = new VideoService();
 
-            // example of real object dependecy injection as method parameter
-            var title = service.ReadVideoTitle(new FileReader());
+            var title = service.ReadVideoTitle();
         }
     }
 }

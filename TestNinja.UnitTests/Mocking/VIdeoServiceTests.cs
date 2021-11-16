@@ -14,10 +14,11 @@ namespace TestNinja.UnitTests.Mocking
         [Test]
         public void ReadVideoTitle_EmptyFile_ReturnError()
         {
+            // example of depency injection via constructor
             var service = new VideoService();
+            service.FileReader = new MockFileReader();
 
-            // example of unit test mock object dependecy injection as method parameter
-            var result = service.ReadVideoTitle(new MockFileReader());
+            var result = service.ReadVideoTitle();
 
             Assert.That(result, Does.Contain("error").IgnoreCase);
         }
