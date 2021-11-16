@@ -9,14 +9,12 @@ using TestNinja.Mocking;
 namespace TestNinja.UnitTests.Mocking
 {
     [TestFixture]
-    public class VIdeoServiceTests
+    public class VideoServiceTests
     {
         [Test]
         public void ReadVideoTitle_EmptyFile_ReturnError()
         {
-            // example of depency injection via constructor
-            var service = new VideoService();
-            service.FileReader = new MockFileReader();
+            var service = new VideoService(new MockFileReader());
 
             var result = service.ReadVideoTitle();
 
