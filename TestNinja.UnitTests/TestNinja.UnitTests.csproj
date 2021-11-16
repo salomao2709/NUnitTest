@@ -59,6 +59,7 @@
     <Compile Include="HtmlFormatterTests.cs" />
     <Compile Include="MathTests.cs" />
     <Compile Include="MockFileReader.cs" />
+    <Compile Include="Mocking\VIdeoServiceTests.cs" />
     <Compile Include="ReservationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StackTests.cs" />
