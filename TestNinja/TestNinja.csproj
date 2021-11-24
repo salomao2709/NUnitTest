@@ -73,6 +73,7 @@
     <Compile Include="Mocking\Program.cs" />
     <Compile Include="Mocking\IVideoRepository.cs" />
     <Compile Include="Mocking\VideoService.cs" />
+    <Compile Include="Mocking\FileDownloader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

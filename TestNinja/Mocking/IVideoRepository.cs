@@ -14,6 +14,7 @@ namespace TestNinja.Mocking
     {
         public IEnumerable<Video> GetUnprocessedVideos()
         {
+            return new List<Video> { new Video { Id = 10 } };
             using (var context = new VideoContext())
             {
                 var videos =
