@@ -4,18 +4,22 @@ namespace TestNinja.Mocking
 {
     public class EmployeeController
     {
-        private EmployeeContext _db;
+        //private EmployeeContext _db;
+        private IEmployeeStorage _employeeStorage;
 
-        public EmployeeController()
+        public EmployeeController(IEmployeeStorage employeeStorage)
         {
-            _db = new EmployeeContext();
+            _employeeStorage = employeeStorage;
         }
 
         public ActionResult DeleteEmployee(int id)
         {
-            var employee = _db.Employees.Find(id);
-            _db.Employees.Remove(employee);
-            _db.SaveChanges();
+            // path ways
+            // id exists in database => remove employee.
+            // id inexists in database => dont remove employee.
+            // redirect to Employees view = verify the state of redirecting.
+            _employeeStorage.RemoveEmployee(id);
+
             return RedirectToAction("Employees");
         }
 
